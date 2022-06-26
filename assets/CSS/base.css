@@ -1,0 +1,237 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --header-height: 120px;
+    --navbar-height: 35px;
+    --header-search-height: calc(var(--header-height) - var(--navbar-height));
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Responsive */
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* flex-direction: row; */
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+/* Test */
+.grid__column-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+    margin-top: 50px;
+
+}
+
+.grid__column-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%;
+    margin-top: 50px;
+}
+
+.grid__column-2-in-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+li {
+    list-style: none;
+}
+
+.no-pointer {
+    cursor: default !important;
+}
+
+/* Authen Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    /* display: flex; */
+    animation: FaceIn ease 1s;
+}
+
+
+/* Animation */
+@keyframes FaceIn {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.open {
+    display: flex;
+}
+
+
+
+.modal-overlay {
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.modal-body {
+    z-index: 2;
+    margin: auto;
+
+}
+
+.auth-form {
+    padding: 30px;
+    background-color: var(--white-color);
+    /* border-radius: 3px; */
+}
+
+.auth-form-container {
+    width: 500px;
+}
+
+.auth-form-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.auth-form-heading {
+    font-size: 1.6rem;
+    padding-left: 8px;
+}
+
+.auth-form-switch-btn {
+    font-size: 1.6rem;
+    padding-right: 8px;
+    color: #C53822;    
+}
+
+.auth-form-switch-btn:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.auth-form-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.auth-form-input {
+    margin-bottom: 15px;
+    padding: 6px 5px;
+    font-size: 1.4rem;
+    border-color: rgba(0, 0, 0, 0.05);
+}
+
+.auth-form-more {
+    font-weight: 300;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.auth-form-policy-link {
+    text-decoration: none;
+    color: orangered;
+}
+
+.auth-form-policy {
+    font-weight: 400;
+}
+
+.auth-form-controls {
+    display: flex;
+    justify-content: end;
+}
+
+.btn {
+    font-size: 1.6rem;
+    padding: 8px 32px;
+    border: none;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.btn--primary {
+    background-color: #EE4D2D;
+    color: var(--white-color);
+}
+
+.auth-form-socials {
+    background-color: #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+
+.auth-form-socials i {
+    padding-right: 15px;
+}
+
+.btn--google,
+.btn--facebook {
+    padding: 10px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 2px;
+    width: 42%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.btn--google{
+    background-color: var(--white-color);
+    color: var(--text-color);
+    margin-right: 30px;
+}
+
+.btn--facebook {
+    background-color: #283C6D;
+    color: var(--white-color);
+    margin-left: 30px;
+
+}
+
+.btn--google:hover,
+.btn--facebook:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
